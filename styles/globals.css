@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
-html,
 body {
   padding: 0;
   margin: 0;
@@ -56,6 +55,11 @@ input:disabled {
   font-family: 'Homemade Apple';
   font-size: 32px;
   width:200px;
+}
+.calculate:hover{
+  color:#FF0000;
+  transition:0.5s;
+  cursor: pointer;
 }
 
 input::-webkit-outer-spin-button,
