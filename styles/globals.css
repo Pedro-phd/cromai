@@ -1,16 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Homemade Apple',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url('https://media.istockphoto.com/photos/white-wrinkle-paper-texture-background-picture-id672298630?b=1&k=20&m=672298630&s=170667a&w=0&h=pXZ_XVHseb5RY49K3N8PlzImUDyhShLMyCx91Q0GIdg=');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+h1{
+  text-align: center;
+  font-size:48px;
+  color: #1400FF;
+}
+.input{
+  background: none;
+  border: none;
+  font-family: 'Homemade Apple';
+  font-size: 32px;
+  width: auto;
+  color:#FF0000;
+  -webkit-appearance: none;
+  outline: none;
+  padding-left: 10px;
+  width: 64px;
+  height: 64px;
+}
+input:disabled {
+  content: "X";
+  background-image: url("https://i.imgur.com/RoEu0yE.png");
+  background-repeat: no-repeat;
+  background-position-y: 25px;
+  background-position-x: -10px;
+  background-size: 64px;
+
+}
+.inputText{
+  font-family: 'Homemade Apple';
+  font-size: 32px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.calculate{
+  background:none;
+  border:none;
+  font-family: 'Homemade Apple';
+  font-size: 32px;
+  width:200px;
 }
 
-* {
-  box-sizing: border-box;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+.resultLogo{
+  margin-top: 10px;;
+  width: 50%;
+}
+
+p{
+  font-size:32px;
+}
+
+@media screen and (max-width:940px){
+  .container{
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  h1{
+    font-size: 24px;
+  }
+  .input{
+    font-size: 24px;
+  }
+  .inputText{
+    font-size: 24px;
+  }
+  .resultLogo{
+    margin-top: 10px;;
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+  }
+  form{
+    justify-content:center;
+  }
+  .calculate{
+    font-size: 24px;
+    margin: 0 auto;
+  }
+  p{
+    font-size:24px;
+    text-align: center;
+  }
+  .fields{
+    display: flex;
+    justify-content: center;
+  }
+  .triangle{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
 }
