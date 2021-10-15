@@ -10,6 +10,7 @@ export default function Home() {
   const [disabledA, setDisabledA] = useState(false)
   const [disabledB, setDisabledB] = useState(false)
   const [disabledC, setDisabledC] = useState(false)
+
   const { register, handleSubmit, watch, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
     defaultValues: initialValue
@@ -60,19 +61,16 @@ export default function Home() {
             <div className="fields">
               <label className="inputText">A = </label>
               <input type="number" {...register("a")} disabled={disabledA} className="input"/>
-              <span>{errors.a?.message}</span>
             </div>
 
             <div className="fields">
               <label className="inputText">B = </label>
               <input type="number" {...register("b")} disabled={disabledB} className="input"/>
-              <span>{errors.b?.message}</span>
             </div>
 
             <div className="fields">
               <label className="inputText">C = </label>
               <input type="number" {...register("c")} disabled={disabledC} className="input"/>
-              <span>{errors.c?.message}</span>
             </div>
 
             <button className="calculate">Calcular</button>
